@@ -1,0 +1,110 @@
+[
+  {
+    "errorCode": "OK",
+    "message": "The request has succeeded.",
+    "httpStatus": 200,
+    "details": "The server has successfully processed the request."
+  },
+  {
+    "errorCode": "CREATED",
+    "message": "The resource has been successfully created.",
+    "httpStatus": 201,
+    "details": "This status is returned when a new resource has been created successfully."
+  },
+  {
+    "errorCode": "ACCEPTED",
+    "message": "The request has been accepted for processing, but the processing has not been completed.",
+    "httpStatus": 202,
+    "details": "This status is typically used for asynchronous operations."
+  },
+  {
+    "errorCode": "NO_CONTENT",
+    "message": "The server has successfully processed the request, but there is no content to return.",
+    "httpStatus": 204,
+    "details": "This status is used when the request was successful, but there is no need to return any data."
+  },
+  {
+    "errorCode": "BAD_REQUEST",
+    "message": "The request was malformed or contains invalid data.",
+    "httpStatus": 400,
+    "details": "This error occurs when the request cannot be processed due to invalid input or parameters."
+  },
+  {
+    "errorCode": "UNAUTHORIZED",
+    "message": "Authentication is required and has failed or has not yet been provided.",
+    "httpStatus": 401,
+    "details": "This error occurs when the request lacks valid authentication credentials."
+  },
+  {
+    "errorCode": "FORBIDDEN",
+    "message": "You do not have permission to access the requested resource.",
+    "httpStatus": 403,
+    "details": "This error occurs when the server understands the request but refuses to authorize it."
+  },
+  {
+    "errorCode": "NOT_FOUND",
+    "message": "The requested resource could not be found.",
+    "httpStatus": 404,
+    "details": "This error occurs when the server cannot find the resource matching the request URL."
+  },
+  {
+    "errorCode": "METHOD_NOT_ALLOWED",
+    "message": "The HTTP method used is not supported for the requested resource.",
+    "httpStatus": 405,
+    "details": "This error occurs when the HTTP method (GET, POST, etc.) is not allowed for the resource."
+  },
+  {
+    "errorCode": "CONFLICT",
+    "message": "The request could not be completed due to a conflict with the current state of the target resource.",
+    "httpStatus": 409,
+    "details": "This error occurs when attempting to insert duplicate data or update an existing resource in a conflicting way."
+  },
+  {
+    "errorCode": "UNPROCESSABLE_ENTITY",
+    "message": "The request was well-formed, but the server was unable to process the contained instructions.",
+    "httpStatus": 422,
+    "details": "This error occurs when the server understands the request but cannot process it due to semantic errors (e.g., validation issues)."
+  },
+  {
+    "errorCode": "INTERNAL_SERVER_ERROR",
+    "message": "An unexpected error occurred on the server.",
+    "httpStatus": 500,
+    "details": "This error occurs when the server encounters an unexpected condition that prevents it from fulfilling the request."
+  },
+  {
+    "errorCode": "NOT_IMPLEMENTED",
+    "message": "The server does not support the functionality required to fulfill the request.",
+    "httpStatus": 501,
+    "details": "This error occurs when the server does not recognize the request method or functionality is not available."
+  },
+  {
+    "errorCode": "BAD_GATEWAY",
+    "message": "The server received an invalid response from the upstream server.",
+    "httpStatus": 502,
+    "details": "This error occurs when a server acting as a gateway or proxy gets an invalid response from an upstream server."
+  },
+  {
+    "errorCode": "SERVICE_UNAVAILABLE",
+    "message": "The server is currently unable to handle the request due to temporary overload or maintenance.",
+    "httpStatus": 503,
+    "details": "This error occurs when the server is temporarily down or overloaded."
+  },
+  {
+    "errorCode": "GATEWAY_TIMEOUT",
+    "message": "The server did not receive a timely response from the upstream server or some other auxiliary server.",
+    "httpStatus": 504,
+    "details": "This error occurs when the server, while acting as a gateway or proxy, did not get a response in time from the upstream server."
+  },
+  {
+    "errorCode": "VERSION_NOT_SUPPORTED",
+    "message": "The server does not support the HTTP version that was used in the request.",
+    "httpStatus": 505,
+    "details": "This error occurs when the server does not support the HTTP version specified in the request."
+  },
+  {
+    "errorCode": "UNKNOWN_ERROR",
+    "message": "An unknown error occurred.",
+    "httpStatus": 500,
+    "details": "No additional details available."
+  }
+]
