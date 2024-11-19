@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: apigetway
+  main:
+#    allow-bean-definition-overriding: true
+    banner-mode: off
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/mobily
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay=
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Allow-Methods Access-Control-Allow-Headers
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            allowed-methods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTIONS
+              - HEAD
+              - TRACE
+              - PATCH
+              - CONNECT
+            exposed-headers:
+              - Cookie
+              - Set-Cookie
+              - Set-Cookie2
+            allowed-headers: "*"
+            allow-credentials: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all endpoints; you can customize this as needed
+  endpoint:
+    health:
+      show-details: always  # Optional: Show full health details
+
+
+server:
+  port: 8088
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: INFO
+        boot:
+          autoconfigure: INFO
+    com:
+      nk:
+        apigateway: DEBUG
