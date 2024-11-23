@@ -1,0 +1,20 @@
+server:
+  port: 1010  # Resource Server listens here
+
+spring:
+  application:
+    name: auth-service
+  main:
+    banner-mode: off
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/mobily
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+#        beans: DEBUG

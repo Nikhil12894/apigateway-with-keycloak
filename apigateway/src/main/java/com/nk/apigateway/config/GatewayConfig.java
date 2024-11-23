@@ -8,12 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class GatewayConfig {
 
+
     @Bean
     RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
 
                 .route("user-service-route", r -> r.path("/user/**")
-                        .filters(f -> f)
+                        .filters(f -> f) // Add validation filter
                         .uri("http://localhost:8081/"))
                 .route("admin-service-route", r -> r.path("/admin/**")
                         .filters(f -> f)
